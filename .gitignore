@@ -1,0 +1,17 @@
+
+*.lock
+.vs/App/
+App.Api/App.Api.Tests/obj/
+App.Api/App.Api/obj/
+App.Framework/bin/
+App.Framework/obj/
+App.Identity/.vs/
+App.Identity/App.Services.Identity.Tests/bin/
+App.Identity/App.Services.Identity/bin/
+
+App.Identity/App.Services.Identity.Tests/obj/
+App.Identity/App.Services.Identity/obj/
+App.Services.Account/App.Services.Account.Tests/obj/
+App.Services.Account/App.Services.Account/obj/
+App.Services.Account/App.Services.Account.Contract/obj/
+*.ide
