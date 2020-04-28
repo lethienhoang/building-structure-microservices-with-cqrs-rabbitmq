@@ -1,0 +1,11 @@
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\bin\Release\netstandard2.0\Framework.MongoDb.deps.json
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\bin\Release\netstandard2.0\Framework.MongoDb.dll
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\bin\Release\netstandard2.0\Framework.MongoDb.pdb
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\bin\Release\netstandard2.0\Framework.dll
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\bin\Release\netstandard2.0\Framework.pdb
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\obj\Release\netstandard2.0\Framework.MongoDb.csprojAssemblyReference.cache
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\obj\Release\netstandard2.0\Framework.MongoDb.AssemblyInfoInputs.cache
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\obj\Release\netstandard2.0\Framework.MongoDb.AssemblyInfo.cs
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\obj\Release\netstandard2.0\Framework.MongoDb.csproj.CopyComplete
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\obj\Release\netstandard2.0\Framework.MongoDb.dll
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.MongoDb\obj\Release\netstandard2.0\Framework.MongoDb.pdb

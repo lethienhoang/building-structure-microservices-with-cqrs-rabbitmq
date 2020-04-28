@@ -3,8 +3,6 @@
 .vs/App/
 App.Api/App.Api.Tests/obj/
 App.Api/App.Api/obj/
-Framework/bin/
-Framework/obj/
 App.Services.Identity/.vs/
 App.Services.Identity/App.Services.Identity.Tests/bin/
 App.Services.Identity/App.Services.Identity/bin/
@@ -23,5 +21,5 @@ App.Services.Account/App.Services.Account.Contract/bin/
 App.Services.Identity/App.Services.Identity.Contract/obj/
 App.Services.Identity/App.Services.Identity.Contract/bin/
 
-*.ide
 App.Services.Account/.vs/
+Framework/Framework/Framework/obj/

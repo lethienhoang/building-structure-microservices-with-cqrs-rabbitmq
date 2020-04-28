@@ -1,0 +1,68 @@
+version: '3.7'
+
+services: 
+    mongodb:
+        image: mongo:latest
+        container_name: mongodb
+        restart: always
+        environment: 
+            MONGO_INITDB_ROOT_USERNAME: "admin-test"
+            MONGO_INITDB_ROOT_PASSWORD: "admin@test"
+            MONGO_INITDB_DATABASE: demodb
+        ports: 
+            - 227017:27017
+        networks: 
+            mynetwork
+        volumes: 
+            - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+            - mongo:/data/db # set data on container persist on your local folder named
+    postgresdb:
+        image: postgres
+        container_name: postgresdb
+        environment: 
+            POSTGRES_USER: "admin-test"
+            POSTGRES_PASSWORD: "admin@test"
+            POSTGRES_DB: "demodb"
+        ports: 
+            - 63009:63009
+        networks: 
+            mynetwork
+        volumes:
+            - postgres:/var/lib/postgresql/data/ # set data on container persist on your local folder named
+    rabbitmq:
+        image: rabbitmq:3.8-management
+        container_name: rabbitmq
+        ports: 
+            - 56672:5672
+            - 15672:15672
+        networks: 
+            mynetwork
+        volumes: 
+            - rabbitmq:/var/lib/rabbitmq
+    sql-server:
+        image: microsoft/mssql-server-linux:latest
+        container_name: sql-server
+        environment: 
+            SA_PASSWORD: "admin@test"
+            ACCEPT_EULA: "Y"
+        ports: 
+            - "1433:1433"
+        networks: 
+            mynetwork
+        volumes: 
+            - mssql:/var/opt/mssql/data # set data on container persist on your local folder named
+            - ./bk:/var/opt/mssql/backup # set data on container persist on your local folder named      
+
+networks:
+  mynetwork:
+    name: my-network
+
+volumes:
+    mongo:
+        driver: local
+    rabbitmq:
+        driver: local
+    postgres:
+        driver: local 
+    mssql:
+        driver: local   

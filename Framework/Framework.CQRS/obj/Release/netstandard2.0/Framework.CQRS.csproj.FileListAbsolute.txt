@@ -1,0 +1,11 @@
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\bin\Release\netstandard2.0\Framework.CQRS.deps.json
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\bin\Release\netstandard2.0\Framework.CQRS.dll
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\bin\Release\netstandard2.0\Framework.CQRS.pdb
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\bin\Release\netstandard2.0\Framework.dll
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\bin\Release\netstandard2.0\Framework.pdb
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\obj\Release\netstandard2.0\Framework.CQRS.csprojAssemblyReference.cache
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\obj\Release\netstandard2.0\Framework.CQRS.AssemblyInfoInputs.cache
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\obj\Release\netstandard2.0\Framework.CQRS.AssemblyInfo.cs
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\obj\Release\netstandard2.0\Framework.CQRS.csproj.CopyComplete
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\obj\Release\netstandard2.0\Framework.CQRS.dll
+D:\Microservices\building-structure-microservices-with-cqrs-rabbitmq\Framework\Framework.CQRS\obj\Release\netstandard2.0\Framework.CQRS.pdb
