@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Messages\Events\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Framework.Auth\Framework.Auth.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.CQRS\Framework.CQRS.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.HTTP\Framework.HTTP.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.MongoDb\Framework.MongoDb.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.RabbitMq\Framework.RabbitMq.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.Swagger\Framework.Swagger.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework\Framework.csproj" />
+    <ProjectReference Include="..\App.Services.Identity.Contract\App.Services.Identity.Contract.csproj" />
+  </ItemGroup>
+</Project>

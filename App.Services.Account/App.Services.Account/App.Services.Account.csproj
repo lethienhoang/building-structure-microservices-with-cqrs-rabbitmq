@@ -5,15 +5,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Messages\Commands\" />
     <Folder Include="Messages\Events\" />
-    <Folder Include="Infrastructure\" />
-    <Folder Include="Db\" />
-    <Folder Include="Models\" />
-    <Folder Include="Handlers\" />
+    <Folder Include="ExternalServicesPort\" />
     <Folder Include="Queries\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Framework.Auth\Framework.Auth.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.CQRS\Framework.CQRS.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.HTTP\Framework.HTTP.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.MongoDb\Framework.MongoDb.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.RabbitMq\Framework.RabbitMq.csproj" />
+    <ProjectReference Include="..\..\Framework\Framework.Swagger\Framework.Swagger.csproj" />
   </ItemGroup>
 
 </Project>
