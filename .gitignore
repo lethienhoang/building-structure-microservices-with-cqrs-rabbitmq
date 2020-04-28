@@ -3,8 +3,8 @@
 .vs/App/
 App.Api/App.Api.Tests/obj/
 App.Api/App.Api/obj/
-App.Framework/bin/
-App.Framework/obj/
+Framework/bin/
+Framework/obj/
 App.Services.Identity/.vs/
 App.Services.Identity/App.Services.Identity.Tests/bin/
 App.Services.Identity/App.Services.Identity/bin/
