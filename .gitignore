@@ -22,4 +22,24 @@ App.Services.Identity/App.Services.Identity.Contract/obj/
 App.Services.Identity/App.Services.Identity.Contract/bin/
 
 App.Services.Account/.vs/
-Framework/Framework/Framework/obj/
+Framework/Framework/obj/
+Framework/Framework/debug/
+Framework/Framework/bin/
+Framework/Framework.CQRS/bin/
+Framework/Framework.CQRS/debug/
+Framework/Framework.CQRS/obj/
+Framework/Framework.Auth/bin/
+Framework/Framework.Auth/debug/
+Framework/Framework.Auth/obj/
+Framework/Framework.HTTP/bin/
+Framework/Framework.HTTP/debug/
+Framework/Framework.HTTP/obj/
+Framework/Framework.MongoDb/bin/
+Framework/Framework.MongoDb/debug/
+Framework/Framework.MongoDb/obj/
+Framework/Framework.RabbitMq/bin/
+Framework/Framework.RabbitMq/debug/
+Framework/Framework.RabbitMq/obj/
+Framework/Framework.Swagger/bin/
+Framework/Framework.Swagger/debug/
+Framework/Framework.Swagger/obj/
