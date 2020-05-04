@@ -21,6 +21,9 @@ using App.Services.Identity.Repositories;
 using Framework.Types;
 using Framework.CQRS.Handlers;
 using Framework.CQRS.Messages;
+using App.Services.Identity.Queries;
+using App.Services.Identity.Handlers;
+using App.Services.Identity.Contract.Responses;
 
 namespace App.Services.Identity
 {
@@ -76,6 +79,9 @@ namespace App.Services.Identity
                 .Where(x => x.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<SignInHandler>().As<IQueryHandler<SignInQuery, JsonWebToken>>();
+            builder.RegisterType<GetUserProfileHandler>().As<IQueryHandler<UserProfileQuery, UserProfileResponse>>();
 
             builder.AddRabbitMq();
             builder.AddMongoDb();

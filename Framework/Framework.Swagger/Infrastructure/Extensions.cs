@@ -8,7 +8,7 @@ namespace Framework.Swagger
     public static class Extensions
     {
         private static string SectionName = "Swagger";
-        public static IServiceCollection AddSwaggerDocs(this IServiceCollection services)
+        public static void AddSwaggerDocs(this IServiceCollection services)
         {
             SwaggerOptions options;
             using (var serviceProvider = services.BuildServiceProvider())
@@ -27,12 +27,7 @@ namespace Framework.Swagger
                 });
             }
 
-            if (!options.Enabled)
-            {
-                return services;
-            }
-
-            return services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc(options.Name, new OpenApiInfo { Title = options.Title, Version = options.Version });
                 if (options.IncludeSecurity)
@@ -43,7 +38,8 @@ namespace Framework.Swagger
                             "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
                         Name = "Authorization",
                         In = ParameterLocation.Header,
-                        Type = SecuritySchemeType.ApiKey
+                        Type = SecuritySchemeType.ApiKey,
+                        BearerFormat = "JWT"
                     });
                 }
             });

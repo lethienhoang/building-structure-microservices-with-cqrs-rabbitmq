@@ -1,4 +1,5 @@
-﻿using App.Services.Account.Domain;
+﻿using App.Services.Account.Contract.Responses;
+using App.Services.Account.Domain;
 using System;
 using System.Threading.Tasks;
 
@@ -11,5 +12,7 @@ namespace App.Services.Account.Repositories
         Task AddAsync(User user);
 
         Task ChangePasswordAsync(Guid userId, string newPassword);
+
+        Task<UserProfileResponse> GetProfilesAsync(Guid userId);
     }
 }

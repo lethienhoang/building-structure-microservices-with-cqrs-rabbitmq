@@ -99,7 +99,7 @@ namespace App.Services.Account
 
             app.UseRabbitMq()
                 .SubscribeCommand<SignedUpCommand>(_namespace: "identityservice")
-                .SubscribeCommand<ChangePasswordCommand>(_namespace: "identityservice");
+                .SubscribeCommand<ChangedPasswordCommand>(_namespace: "identityservice");
 
             app.UseAuthentication();
 

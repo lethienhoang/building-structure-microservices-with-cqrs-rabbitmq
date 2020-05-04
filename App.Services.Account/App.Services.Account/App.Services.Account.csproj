@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Messages\Events\" />
     <Folder Include="ExternalServicesPort\" />
-    <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +25,7 @@
     <ProjectReference Include="..\..\Framework\Framework.MongoDb\Framework.MongoDb.csproj" />
     <ProjectReference Include="..\..\Framework\Framework.RabbitMq\Framework.RabbitMq.csproj" />
     <ProjectReference Include="..\..\Framework\Framework.Swagger\Framework.Swagger.csproj" />
+    <ProjectReference Include="..\App.Services.Account.Contract\App.Services.Account.Contract.csproj" />
   </ItemGroup>
 
 </Project>

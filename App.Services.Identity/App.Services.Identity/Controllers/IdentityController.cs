@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace App.Services.Identity.Controllers
 {
-    [Route("identity")]
+    [Route("api/identity")]
     [ApiController]
     public class IdentityController : ApiControllerBase
     {
@@ -34,23 +34,12 @@ namespace App.Services.Identity.Controllers
         [HttpPost]
         [Route("sign-in")]
         [AllowAnonymous]
-        public async Task<ActionResult> SignIn([FromBody] SignUpRequest request)
+        public async Task<ActionResult> SignIn([FromBody] SignInRequest request)
         {
             var query = new SignInQuery(request.Email, request.Password);
-            await _dispatcher.QueryAsync(query);
+            var result = await _dispatcher.QueryAsync(query);
 
-            return Ok();
-        }
-
-        [HttpPost]
-        [Route("me")]
-        public async Task<ActionResult> GetUserProfile()
-        {
-            var userContext = _claimService.GetUserContext();
-
-            var query = new UserProfileQuery(userContext.Claims.OnUserId);
-
-            return Ok(await _dispatcher.QueryAsync(query));
+            return Ok(result);
         }
 
         [HttpPost]
@@ -59,7 +48,7 @@ namespace App.Services.Identity.Controllers
         {
             var userContext = _claimService.GetUserContext();
 
-            var command = new ChangePasswordCommand(userContext.Claims.OnUserId, request.NewPassword);
+            var command = new ChangedPasswordCommand(userContext.Claims.OnUserId, request.NewPassword);
             await _dispatcher.SendAsync(command);
 
             return Ok();

@@ -49,7 +49,7 @@ namespace Framework.Auth
             var now = DateTimeHelper.GenerateTodayUTC();
             var jwtClaims = new List<Claim>
             {
-                new Claim(CoreConstants.OnUserIdClaimType, userId),
+                new Claim(JwtRegisteredClaimNames.Sub, userId),
                 new Claim(JwtRegisteredClaimNames.UniqueName, userId),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, now.ToTimestamp().ToString())
@@ -59,7 +59,7 @@ namespace Framework.Auth
             {
                 foreach(var role in roles)
                 {
-                    jwtClaims.Add(new Claim(CoreConstants.RoleIdClaimType, role));
+                    jwtClaims.Add(new Claim(ClaimTypes.Role, role));
                 }
             }
 

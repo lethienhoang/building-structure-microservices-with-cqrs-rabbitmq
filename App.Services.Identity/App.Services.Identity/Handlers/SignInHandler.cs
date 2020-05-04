@@ -2,10 +2,12 @@
 using App.Services.Identity.Infrastructure.Constants;
 using App.Services.Identity.Queries;
 using App.Services.Identity.Repositories;
+using Framework;
 using Framework.Auth;
 using Framework.CQRS.Handlers;
 using Framework.Domain;
 using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -36,10 +38,16 @@ namespace App.Services.Identity.Handlers
                 throw new DomainException(Codes.InvalidCredentials, MessagesCode.InvalidCredentials);
             }
 
-            var rolesName = user.UserRoles.Select(x => x.Role.RoleName).ToList();
+            var rolesName = user.UserRoles != null ? user.UserRoles.Select(x => x.Role.RoleName).ToList() : new List<string>();
             var refreshToken = new RefreshToken(user, _passwordHasher);
 
-            var jwt = _jwtHandler.CreateToken(user.Id.ToString("N"), rolesName);
+            var claim = new Dictionary<string, string>()
+            {
+                { CoreConstants.OnUserIdClaimType, user.Id.ToString() },
+                { CoreConstants.RoleIdClaimType, string.Join(",", rolesName) }
+            };
+
+            var jwt = _jwtHandler.CreateToken(user.Id.ToString("N"), rolesName, claim);
             jwt.RefreshToken = refreshToken.Token;
 
             await _refreshTokenRepository.AddAsync(refreshToken);

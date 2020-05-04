@@ -22,6 +22,9 @@ namespace Framework.Auth
         {
             var user = _httpContextAccessor.HttpContext.User;
 
+            var authorizationHeader = _httpContextAccessor
+                .HttpContext.Request.Headers["authorization"];
+
             if (user == null || user.Identity == null || !user.Identity.IsAuthenticated)
             {
                 return new UserContext();

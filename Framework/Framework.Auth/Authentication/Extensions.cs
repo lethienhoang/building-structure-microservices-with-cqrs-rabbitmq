@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Framework.Auth
 {
@@ -36,9 +37,15 @@ namespace Framework.Auth
             services.AddSingleton<IJwtHandler, JwtHandler>();
             services.AddTransient<IAccessTokenService, AccessTokenService>();
             services.AddSingleton<AccessTokenValidatorMiddleware>();
-            services.AddAuthentication()
+            services.AddAuthentication(
+                opts =>
+                {
+                    opts.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    opts.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
                 .AddJwtBearer(cfg =>
                 {
+                    cfg.SaveToken = true;
                     cfg.TokenValidationParameters = new TokenValidationParameters
                     {
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.SecretKey)),

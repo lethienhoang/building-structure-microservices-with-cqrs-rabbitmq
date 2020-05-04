@@ -2,7 +2,7 @@
 
 namespace App.Services.Account.Controllers
 {
-    [Route("healthcheck")]
+    [Route("api/healthcheck")]
     [ApiController]
     public class HealthcheckController : ControllerBase
     {

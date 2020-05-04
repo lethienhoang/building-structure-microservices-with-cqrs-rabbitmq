@@ -15,8 +15,9 @@ namespace App.Services.Account.Domain
 
         protected UserRoles() { }
 
-        public void AssignRoleToUser(Guid userId, Guid roleId)
+        public UserRoles(Guid userId, Guid roleId)
         {
+            Id = Guid.NewGuid();
             UserId = userId;
             RoleId = roleId;
         }
